@@ -149,3 +149,8 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Für Minions muss die Schadensberechnung/Zieltyp-Skalierung so abgestimmt werden, dass die gewünschten Trefferzahlen trotz höherem Nexus-Schaden gelten. Dies ist eine Designvorgabe, keine Behauptung über bereits implementierte Werte.
 - Bei skalierenden Minion-HP sind die Trefferzahlen beim Balancing über die Spielzeit zu prüfen.
 - V01.6 bleibt vorerst unverändert.
+
+## Turm-Rüstung über die Spielzeit: LoL-Vorbild (in Abstimmung)
+- Nutzer wünscht frühe hohe Turm-Rüstung/Magieresistenz, die mit der Matchdauer abnimmt.
+- Offizielle LoL-Patch-26.1-Referenz (Summoner's Rift): Äusserer Turm 9.000 HP, 60 Basis-Rüstung und -MR, verliert ab Minute 11 jeweils 15 Rüstung/MR pro Minute bis zu -60; innerer Turm 5.000 HP und konstant 60 Rüstung/MR. Quelle: https://www.leagueoflegends.com/en-us/news/game-updates/patch-26-1-notes/
+- Für Champion Arena ist noch abzustimmen, ob diese Zeitpunkte 1:1 übernommen oder für kürzere Arenamatches proportional verkürzt werden. Keine Implementierung.
