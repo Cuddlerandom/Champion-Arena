@@ -207,3 +207,9 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Entscheidungen müssen im Test nachvollziehbar protokollierbar sein; Hysterese/Mindestdauer verhindert hektisches Umschalten.
 - Validierung: reproduzierbare Level-1-/Level-6-/Full-Build-Duelle und viele vollständige 1v1-Simulationen; Ziel 15–25 Minuten ohne künstlichen Matchtimer.
 - Status: Design freigegeben, **Implementierung und Simulation der neuen Utility-AI noch offen**. Nur develop, kein Merge nach main ohne Freigabe.
+
+## XP-Balancing-Ziel – freigegeben (17.10.2026)
+- Bei einem ausgeglichenen, ordentlich gespielten 1v1 soll ein Champion **spätestens nach rund 30 Minuten Level 18** erreichen können; Richtwerte nach 20 Minuten Level 13–16, nach 25 Minuten Level 16–18.
+- **Keine automatische Levelvergabe nach Zeit**: XP bleibt an Minion-Nähe, Kills und Spielbeteiligung gebunden.
+- Klare Ausnahme: Die gegnerische KI kann durch gutes Spiel und hart bestrafte Fehler (Tode, verpasste Wellen, Zone-Control, schlechte Rückzüge) den Level-18-Zeitpunkt deutlich hinauszögern.
+- Zur Validierung mehrere reproduzierbare 1v1-Simulationen inklusive XP-Verlauf, Todesfällen und verpassten Wellen vergleichen; Balancewerte erst danach finalisieren. Bisheriger Einzeltest endete bei 22:41 vor Level 18.
