@@ -168,3 +168,11 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Die Champion-KI soll Rückzug, Regeneration und Einkäufe sinnvoll verbinden.
 - Passive Lebensregeneration auf der Lane sowie drei Basis-Items wurden vorgeschlagen, ihre konkreten Zahlen und die technische Implementierung sind noch nicht abschliessend freigegeben bzw. getestet.
 - Bestehende automatische Item-Käufe ausserhalb der Basis müssen bei der Implementierung ersetzt werden.
+
+## Goldwirtschaft B – freigegeben und implementiert auf develop
+- 500 Startgold pro Champion; 2 Gold pro Sekunde passiv.
+- Nahkampf-Minion 21 Gold, Fernkampf-Minion 14 Gold bei Champion-Last-Hit; nahe verbündete Champions (Radius 240) erhalten 50 % abgerundet, wenn ein anderer die Einheit tötet. Last-Hit-Champion erhält vollen Betrag, nicht zusätzlich den Nähebonus.
+- Champion-Kill 300 Gold, First Blood zusätzlich 100; nahe Assist-Champions 150 Gold; bei Kill durch Nicht-Champion erhält der nächste lebende verbündete Champion die Killbelohnung (vorläufige Auto-Battler-Regel).
+- Turmzerstörung 250 Gold für Champion-Last-Hit und 100 Gold pro Champion des Teams.
+- Items nur in eigener Basis (Radius 85 um Heimposition); Klinge 900 Gold (+20 Angriff), Schild 1100 Gold (+250 LP/+25 Rüstung), Amulett 850 Gold (+150 LP/+8 LP pro 5 Sekunden). Jedes Basis-Item pro Champion höchstens einmal, feste KI-Kaufpriorität.
+- Passive Regeneration 4 LP/5s + 0,5 LP/5s pro zusätzlichem Level; Shop und Goldsystem sind vorläufig balanciert und müssen simuliert werden.
