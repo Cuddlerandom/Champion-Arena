@@ -6,14 +6,14 @@
 <script>
 'use strict';
 const canvas=document.getElementById('game'),ctx=canvas.getContext('2d'),score=document.getElementById('score'),notice=document.getElementById('notice');
-const sizes={1:{w:1250,h:650,lane:165},3:{w:1900,h:950,lane:155},5:{w:2650,h:1320,lane:145}};
+const sizes={1:{w:1850,h:750,lane:165},3:{w:1900,h:950,lane:155},5:{w:2650,h:1320,lane:145}};
 let mode=1,map=sizes[1],speed=1,paused=false,time=0,spawnIn=0,winner=null,units=[],towers=[],cores=[],shots=[],selectedTower=null,bursts=[],camera={x:625,y:325,z:1},viewW=1,viewH=1,last=performance.now(),id=0;
 const color=['#6cbcff','#ff777c'],clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),d=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 function laneY(l){return map.h/2+(l-(mode===5?1:0))*(mode===5?map.h*.29:0)}
 function pathY(team,l,x){if(mode===1)return map.h/2;if(mode===3){const mid=map.w/2;const blend=Math.sin(Math.PI*clamp(x/map.w,0,1));return map.h/2+(l===1?-1:l===2?1:0)*map.h*.29*blend}return laneY(l)}
 function unit(team,type,l,x,y){const melee=type==='melee',caster=type==='caster',champ=type==='champ';const tier=Math.floor(time/90),hp=champ?420:melee?430+35*tier:caster?284+9*tier:320+25*tier;const hero=champ?(team?'darius':'garen'):null;const base=hero==='garen'?{hp:690,atk:69,armor:38,mr:32,regen:8,attackSpeed:.625}:hero==='darius'?{hp:652,atk:64,armor:37,mr:32,regen:10,attackSpeed:.625}:null;return{id:++id,team,type,l,x,y,hero,hp:base?base.hp:hp,max:base?base.hp:hp,armor:base?base.armor:melee||caster?0:champ?30:0,mr:base?base.mr:champ?30:0,atk:base?base.atk:melee?11+1.5*tier:caster?21+1.5*tier:16+1.5*tier,regen:base?base.regen:0,attackSpeed:base?base.attackSpeed:0,range:champ?73:melee?30:caster?125:32,cd:Math.random(),level:1,xp:0,gold:champ?500:0,items:0,inventory:[],dead:0,kills:0,step:0,skills:{q:0,w:0,e:0,r:0},aiStyle:champ?['aggressive','balanced','defensive'][Math.floor(Math.random()*3)]:null,aiBias:champ?(Math.random()-.5)*12:0,aiDeaths:0,aiLastDeathAt:-999,aiEnemyKillsSeen:0,aiAdaptStyle:null,bleed:0,bleedUntil:0,bleedTick:0,spinUntil:0,spinTick:0,damageAt:-999,mana:hero==='darius'?263:0,maxMana:hero==='darius'?263:0}}
 function setup(){mode=Number(document.getElementById('mode').value);map=sizes[mode];time=0;spawnIn=18;winner=null;units=[];towers=[];cores=[];shots=[];bursts=[];selectedTower=null;id=0;firstBlood=false;
-for(let team=0;team<2;team++){const bx=team?map.w-75:75;cores.push({team,x:bx,y:map.h/2,hp:2600,max:2600,armor:60,mr:60,cd:0,aggro:null,comboId:null,combo:0,type:'core'});for(let i=0;i<2;i++){const x=mode===1?(team?map.w-(i?240:415):(i?240:415)):(team?map.w-300:300);const y=mode===1?map.h/2:(map.h/2+(i?95:-95));towers.push({team,x,y,hp:i===0?3300:2300,max:i===0?3300:2300,armor:60,mr:60,outer:i===0,cd:0,aggro:null,comboId:null,combo:0,type:'tower'});}
+for(let team=0;team<2;team++){const bx=team?map.w-75:75;cores.push({team,x:bx,y:map.h/2,hp:2600,max:2600,armor:60,mr:60,cd:0,aggro:null,comboId:null,combo:0,type:'core'});for(let i=0;i<2;i++){const x=mode===1?(team?map.w-(i?260:490):(i?260:490)):(team?map.w-300:300);const y=mode===1?map.h/2:(map.h/2+(i?95:-95));towers.push({team,x,y,hp:i===0?3300:2300,max:i===0?3300:2300,armor:60,mr:60,outer:i===0,cd:0,aggro:null,comboId:null,combo:0,type:'tower'});}
 for(let i=0;i<mode;i++){const lane=mode===5?i%3:mode===3?i%3:0;const x=team?map.w-155:155;units.push(unit(team,'champ',lane,x,pathY(team,lane,x)+(i%2?22:-22)));}}
 center();notice.style.display='none';}
 function center(){camera.x=map.w/2;camera.y=map.h/2;camera.z=clamp(Math.min(viewW/(mode===1?800:1050),viewH/(mode===1?510:690)),.36,1.4);bounds()}
@@ -71,7 +71,8 @@ const base=target.type==='melee'?(430+35*tier)/2.55:target.type==='caster'?(284+
 const damage=target.type==='champ'?160*(nexus?1.2:1)*(1+Math.min(3,st.combo)*.25):base;
 shots.push({sx:st.x,sy:st.y-30,target,team:st.team,life:0,flight:.35,damage,source:st});
 }
-function move(u,to,dt,rate){const distance=d(u,to);if(distance>1){const step=Math.min(distance,rate*dt);u.x+=(to.x-u.x)/distance*step;u.y+=(to.y-u.y)/distance*step}}
+function turretUnsafe(u,pos){return towers.some(t=>t.team!==u.team&&t.hp>0&&d(pos,t)<195&&!units.some(m=>m.team===u.team&&m.type!=='champ'&&m.hp>0&&d(m,t)<155))||cores.some(t=>t.team!==u.team&&t.hp>0&&!towers.some(v=>v.team===t.team&&v.hp>0)&&d(pos,t)<185&&!units.some(m=>m.team===u.team&&m.type!=='champ'&&m.hp>0&&d(m,t)<145))}
+function move(u,to,dt,rate){const distance=d(u,to);if(distance>1){const step=Math.min(distance,rate*dt);const nx=u.x+(to.x-u.x)/distance*step,ny=u.y+(to.y-u.y)/distance*step;if(u.type==='champ'&&turretUnsafe(u,{x:nx,y:ny})&&!turretUnsafe(u,u))return;u.x=nx;u.y=ny}}
 // Tactical knowledge is based on visible match state; no hidden enemy information.
 function tacticalKnowledge(u,enemy,objective){
  const allyWave=units.filter(v=>v.team===u.team&&v.type!=='champ'&&v.hp>0&&d(v,objective)<185).length;
@@ -123,13 +124,13 @@ if(u.type==='champ'){
    const friendlyWave=units.filter(v=>v.team===u.team&&v.type!=='champ'&&v.hp>0&&d(v,objective)<225);
    if(friendlyWave.length){target=objective}
    else if(farmTarget&&d(u,farmTarget)<155)target=farmTarget;
-   else {const staging={x:objective.x+(u.team?190:-190),y:objective.y};if(d(u,staging)>28)move(u,staging,dt,72);continue}
+   else {const staging={x:objective.x+(u.team?215:-215),y:objective.y};if(d(u,staging)>28)move(u,staging,dt,72);continue}
   }
   if(d(u,target)<160)championSkills(u,target,dt);
  }
 }
 if(u.type!=='champ'&&!nearby.length){const destX=u.team?Math.max(70,u.x-110):Math.min(map.w-70,u.x+110);const route={x:destX,y:pathY(u.team,u.l,destX)};if(u.type==='caster'){const front=units.filter(v=>v.team===u.team&&v.type==='melee'&&v.hp>0&&d(u,v)<170);const lead=front.length?front.reduce((a,b)=>u.team?(a.x<b.x?a:b):(a.x>b.x?a:b)):null;if(lead){const gap=u.team?u.x-lead.x:lead.x-u.x;if(gap<55&&gap>0){continue}}}if(d(u,objective)<(u.type==='caster'?u.range+22:120))target=objective;else{move(u,route,dt,u.type==='caster'?34:42);continue}}
-if(u.type==='champ'&&(target.type==='tower'||target.type==='core')&&d(u,target)<185){const alliedMinions=units.some(v=>v.team===u.team&&v.type!=='champ'&&v.hp>0&&d(v,target)<170);if(!alliedMinions){const stop={x:u.team?target.x+190:target.x-190,y:target.y};if(d(u,stop)>35)move(u,stop,dt,65);continue}}
+if(u.type==='champ'&&(target.type==='tower'||target.type==='core')&&d(u,target)<185){const alliedMinions=units.some(v=>v.team===u.team&&v.type!=='champ'&&v.hp>0&&d(v,target)<170);if(!alliedMinions){const stop={x:u.team?target.x+215:target.x-215,y:target.y};if(d(u,stop)>35)move(u,stop,dt,65);continue}}
 const reach=u.range+(target.type==='core'?30:target.type==='tower'?20:0);
 if(d(u,target)>reach)move(u,target,dt,u.type==='champ'?(u.hasteUntil>time?95:72):42);else if(u.cd<=0&&target.hp>0){u.cd=u.type==='champ'?1/Math.max(.3,u.attackSpeed||.625):u.type==='melee'?.8:u.type==='caster'?1.5:1.35;hit(u,target,u.atk)}
 }
