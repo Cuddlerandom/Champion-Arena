@@ -17,3 +17,10 @@
 ## Verification
 - GitHub Pages works according to the user's Safari test.
 - No automated browser test or Godot build is currently confirmed.
+
+## Versioning convention
+- Public versions use `V01.1`, `V01.2`, `V01.3` and so on.
+- `archive/V01.1` is a Git branch snapshot of the initial working iPhone prototype from `main` (not a Git tag or release).
+- Before major changes, create a new `archive/Vxx.y` branch from the current playable `main` state. Never rewrite archive branches.
+- Continue developing on `develop`; user-approved playable changes can be published on `main`.
+- Rollback is a deliberate Git operation after checking the target revision, not an automatic switch.
