@@ -103,3 +103,9 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Gegen Türme und Kristalle verursachen beide Minion-Typen noch stärker reduzierten Schaden, damit Minion-Wellen allein keine Gebäude zu schnell zerstören.
 - Die zieltypabhängigen Schadensmultiplikatoren wirken zusätzlich zur physischen Rüstungsberechnung.
 - Exakte LoL-orientierte Multiplikatoren sind noch zu recherchieren und für Champion Arena abzustimmen; keine Implementierung in V01.6.
+
+## Türme: ansteigender Schaden gegen Champions (freigegeben)
+- Wiederholte Turmtreffer auf denselben Champion steigern den Schaden stufenweise bis zu einer Obergrenze, nach LoL-Vorbild.
+- Bei Zielwechsel wird die Schadenssteigerung zurückgesetzt.
+- Dieses bereits in V01.6 vorhandene Grundprinzip bleibt erhalten.
+- Exakte Schadensstufen, Obergrenze und eventuelle Sonderfälle werden separat abgestimmt.
