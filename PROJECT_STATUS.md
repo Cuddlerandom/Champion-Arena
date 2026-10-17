@@ -73,3 +73,9 @@
 - **Keine vollständige LoL-Patch-Parität:** Fähigkeitsformeln, Skill-Ränge, Manasystem, Trefferzonen, Blutungs-/Ultimate-Resets, W-Passive und exakte Cooldowns sind noch zu verifizieren/ergänzen. Die aktuelle Blutungslogik muss auf unbeabsichtigtes erneutes Stapeln durch DoT-Ticks geprüft werden.
 - Headless-1v1-Test 30 Minuten ohne Laufzeitfehler: beide äusseren Türme zerstört, innere Turm-HP 445 und 1925, kein Sieger. 15–25-Minuten-Ziel weiterhin verfehlt.
 - Browser- und iPhone-Safari-Test offen. main bleibt unverändert.
+
+## Garen vs Darius – Stand 17.10.2026 (develop)
+- Champion-Grundwerte/Levelwachstum aus LoL Patch 26.20 und erste Q/W/E/R-Mechaniken für beide Champions im Code vorhanden; diese sind **vereinfachte Annäherungen**, nicht vollständig LoL-identisch (z. B. Mana-Kosten, Zielgeometrie, W-Passivstapel, Bleed-Details, Angriffstempo-Formel, CC und visuelle Darstellung noch unvollständig). Zusätzliche Verbesserungen Commit 7843d738.
+- Headless-Isolationsduelle (keine Minions/Türme, vereinfachte Kampf-Loop): Level 1 Garen gewinnt nach 14s mit 205/788 LP; Level 6 Darius gewinnt nach 10s mit 328/1222 LP; Level 18 mit drei legendären Items Darius gewinnt nach 23s mit 2357/3790 LP. Diese Testschleife ist **kein identischer Spielmodus**, da tick()-Bewegung und passive Regeneration nicht ausgeführt werden.
+- 30-Minuten-Headless-1v1 mit tick(): kein Sieger; äussere Türme beider Teams zerstört; innere Türme HP [2300, 529], Nexus beide 2600/2600. Zielmatchdauer 15–25 min weiterhin verfehlt.
+- Noch offen: vollständige Skilltreue und Ressourcen, KI und Shop, UI für Fähigkeiten/Inventar, mehrfache reproduzierbare Tests, echte Browser-/iPhone-Safari-Tests. Keine Freigabe für main.
