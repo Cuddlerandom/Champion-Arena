@@ -186,3 +186,9 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - **Intelligente Build-KI (Variante B):** Champions wählen und priorisieren Items situationsabhängig anhand ihrer Rolle, gegnerischer Schadensarten und Zusammensetzung, eigener Überlebensfähigkeit und Spielphase; keine rein feste oder zufällige Build-Reihenfolge.
 - **Erste geplante Endgegenstände:** Infernoschneide (ca. 3'200 Gold, Angriff/Krit), Bollwerk der Ewigkeit (ca. 3'000 Gold, Leben/Rüstung/Schild), Herz der Erneuerung (ca. 2'900 Gold, Leben/Regeneration/Heilung). Namen, Komponenten, genaue Effekte und Preise sind vorläufig und bedürfen Balance-Tests.
 - **Implementierungsstatus:** Dies ist eine genehmigte Designvorgabe, **noch nicht im Spielcode implementiert**. Das aktuelle einfache Drei-Item-System auf develop bleibt bis zur Umstellung bestehen. Vor Freigabe: Inventar-/Upgrade-Logik, korrekte Goldabrechnung, KI-Auswahl, sechs Slots und Match-Simulation prüfen.
+
+## Verbindliche 1v1-Testpaarung – freigegeben
+- **Team Blau: Garen**, **Team Rot: Darius** als feste Referenzpaarung für die Entwicklung und Balance von Champion Arena V01.7.
+- Champions sollen sich durch eigene Grundwerte, Skalierung, Fähigkeiten, Regeneration und passende situative Item-Builds unterscheiden; nicht künstlich identische Siegquoten erzwingen.
+- Testplan: Duell Level 1, Duell Level 6, Duell mit vollständigen Builds und vollständiges 1v1 mit Minions, Türmen und Nexus.
+- Die zuvor genannten LoL-Statistiken sind Referenzwerte, noch keine im Spielcode implementierten Champion-Werte. Individuelle Champion-Kits und Balancing bleiben offen.
