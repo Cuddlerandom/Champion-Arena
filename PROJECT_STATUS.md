@@ -24,3 +24,9 @@
 - Before major changes, create a new `archive/Vxx.y` branch from the current playable `main` state. Never rewrite archive branches.
 - Continue developing on `develop`; user-approved playable changes can be published on `main`.
 - Rollback is a deliberate Git operation after checking the target revision, not an automatic switch.
+
+## V01.2 development (develop only, not yet published)
+- Added landscape-first responsive canvas and camera panning with one finger, pinch zoom with two fingers and a recenter control.
+- Added mode selector for 1v1, 3v3, 5v5, distinct map sizes, left-right mirrored lanes and team bases.
+- Added automated champions and minions in each mode; structures and core invulnerability logic. This is a first playable implementation, not a final balanced design.
+- Needs actual iPhone Safari testing and CI verification before publication to main. AI is still basic and the 3v3/5v5 layouts are schematic.
