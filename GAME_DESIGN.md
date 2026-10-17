@@ -33,3 +33,10 @@ Valdrik — Der Eiserne Eid (tank/protector): P Eiserner Wille; Q Schildschlag; 
 
 ## Important distinction
 These are design goals, not claims of existing implementation. Consult PROJECT_STATUS.md for what currently works.
+
+## Approved arena layouts (V01.2 design)
+- 1v1: compact duel arena, one wide central lane, very few obstacles; two towers and a core per side.
+- 3v3: medium tactical arena, one central lane plus two mirrored side detours and obstacles for flanking and retreat.
+- 5v5: large arena with three main lanes and connecting paths, enabling rotations, flanking and coordinated team fights.
+- All layouts mirror left/right across the centerline and preserve equal access, travel distance and defensive placement for both teams.
+- Implement and validate the 1v1 arena first, then expand to 3v3 and 5v5. This is an approved design plan, not yet implemented gameplay.
