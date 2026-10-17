@@ -154,3 +154,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Nutzer wünscht frühe hohe Turm-Rüstung/Magieresistenz, die mit der Matchdauer abnimmt.
 - Offizielle LoL-Patch-26.1-Referenz (Summoner's Rift): Äusserer Turm 9.000 HP, 60 Basis-Rüstung und -MR, verliert ab Minute 11 jeweils 15 Rüstung/MR pro Minute bis zu -60; innerer Turm 5.000 HP und konstant 60 Rüstung/MR. Quelle: https://www.leagueoflegends.com/en-us/news/game-updates/patch-26-1-notes/
 - Für Champion Arena ist noch abzustimmen, ob diese Zeitpunkte 1:1 übernommen oder für kürzere Arenamatches proportional verkürzt werden. Keine Implementierung.
+
+## Ziel-Matchdauer und Team-KI (freigegeben)
+- Ziel für reguläre Champion-Arena-Matches: **15–25 Spielminuten bei 1× Geschwindigkeit**.
+- Die tatsächliche Dauer soll von der Qualität der Team-KI und ihrem Zusammenspiel abhängen, nicht von einem künstlichen Match-Ende oder Timer.
+- Gut koordinierte Teams können durch gemeinsames Pushen, Champion-Kills und Objektivspiel früher (ca. 15 Minuten) gewinnen; ausgeglichene Begegnungen dürfen ca. 25 Minuten dauern.
+- LoL-orientierter Rüstungs-/MR-Abbau am vorderen Turm **ab Minute 11 als vorläufiger Balancing-Ausgangspunkt**, erst nach Umsetzung des neuen Kampfsystems und Simulationen finalisieren.
+- Team-KI, Minion-Scaling und Turm-/Nexus-Werte müssen gemeinsam getestet werden. Noch keine Gameplay-Implementierung; Live V01.6 unverändert.
