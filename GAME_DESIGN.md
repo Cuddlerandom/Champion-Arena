@@ -127,3 +127,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - **Einzige bewusst abweichende Mechanik: Angriffsreichweite**, die auf die kleinere Champion-Arena-Karte und Lane-Geometrie abgestimmt wird; exakter Wert folgt nach Test.
 - Die freigegebene Anordnung von zwei Türmen hintereinander bleibt erhalten.
 - Aktuelle LoL-Details sind vor Implementierung anhand verlässlicher Quellen zu prüfen; diese Freigabe ist ein Designziel und bedeutet noch keine technische Umsetzung in V01.6.
+
+## Nexus/Kristall: aktive letzte Verteidigung (freigegeben)
+- Solange mindestens einer der beiden eigenen Türme steht, bleibt der Nexus durch seinen Schild unangreifbar und greift selbst nicht an.
+- Erst wenn **beide** eigenen Türme zerstört sind, fällt der Schild: Der Nexus wird angreifbar **und aktiviert eine eigene Verteidigungsattacke**.
+- Die Zerstörung des Nexus beendet das Match mit einem Sieg der gegnerischen Mannschaft.
+- Bewusste Abweichung vom klassischen LoL-Nexus, damit nach dem Verlust beider Türme eine letzte Verteidigung bleibt.
+- Reichweite, Schaden, Angriffstempo und Zielpriorität der Nexus-Verteidigung werden noch abgestimmt; noch keine Live-Implementierung.
