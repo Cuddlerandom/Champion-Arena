@@ -67,3 +67,9 @@
 - Erste Headless-Simulation deckte blockierende parallele Itemzweige auf; Kauf-KI korrigiert, sodass begonnene Rezepte priorisiert abgeschlossen werden.
 - Nach Korrektur: 30-Minuten-Headless-1v1-Simulation, ein äusserer Turm zerstört, kein Sieger, übrige äussere Turm-HP 726, innere Türme/Nexus unbeschädigt. 15–25-Minuten-Ziel weiterhin verfehlt.
 - Einschränkungen: Nur JS-Logik simuliert, kein echter Browser-/Safari-Test; Build-KI, Kaufhistorie, Inventar und Balancing benötigen zusätzliche Tests. main nicht verändert.
+
+## Garen gegen Darius – erster technischer Prototyp
+- develop Commit a9b17d6: Team Blau Garen, Team Rot Darius; individuelle Level-1-Werte, Level-Skalierung und Angriffstempo. Erste automatisierte Q/W/E/R-Effekte, Garen-Regeneration und Darius-Blutung integriert.
+- **Keine vollständige LoL-Patch-Parität:** Fähigkeitsformeln, Skill-Ränge, Manasystem, Trefferzonen, Blutungs-/Ultimate-Resets, W-Passive und exakte Cooldowns sind noch zu verifizieren/ergänzen. Die aktuelle Blutungslogik muss auf unbeabsichtigtes erneutes Stapeln durch DoT-Ticks geprüft werden.
+- Headless-1v1-Test 30 Minuten ohne Laufzeitfehler: beide äusseren Türme zerstört, innere Turm-HP 445 und 1925, kein Sieger. 15–25-Minuten-Ziel weiterhin verfehlt.
+- Browser- und iPhone-Safari-Test offen. main bleibt unverändert.
