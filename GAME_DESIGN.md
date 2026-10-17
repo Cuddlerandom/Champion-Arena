@@ -61,3 +61,11 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Tower tap reveals range. Core displays shield while any defending tower survives, and becomes vulnerable only after both are destroyed.
 - Damaged towers show cracks; tower/core destruction produces visual bursts and the core triggers a victory banner.
 - Next milestone: agree detailed numeric stats for core, melee/caster minions and towers, then balance through playtests.
+
+## Freigegebenes Schadenssystem (Entscheidung des Projektinhabers)
+- Exakt drei Grundschadensarten: **physisch**, **magisch**, **wahr**.
+- Physischer Schaden wird durch Rüstung reduziert.
+- Magischer Schaden wird durch Magieresistenz reduziert.
+- Wahrer Schaden ignoriert Rüstung und Magieresistenz.
+- Keine separaten Elementarschadensarten (Feuer, Eis etc.) als eigenständiges Schadenssystem.
+- Konkrete Formeln, Zahlenwerte und Zuordnung zu Minions, Türmen und Champions werden als nächster Balancing-Schritt festgelegt; die aktuelle Spielimplementierung ist noch nicht auf dieses System umgestellt.
