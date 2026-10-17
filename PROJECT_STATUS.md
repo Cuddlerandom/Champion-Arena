@@ -94,3 +94,8 @@
 ## XP-Balance-Test – 17.10.2026
 - Commit ecea168: XP pro Minion 10→20, Nähe 240→330, XP-Levelschwelle Level×35→Level×22.
 - Ein 1v1-Headless-Lauf: Level nach 5min 6/6, 10min 9/9, 15min 11/11, 20min 14/13; Garen gewinnt nach 1361s = 22:41. Level 18 vor Matchende **noch nicht erreicht**. Kein Browser-Test, keine statistische Stichprobe.
+
+## KI-Varianztest – 20 reproduzierbare Läufe (17.10.2026)
+- Commit 1ee04cc: drei zufällig initialisierte KI-Spielstile (aggressive/balanced/defensive), individuelle Bias-Werte auf Utility-Scores; deterministisch reproduzierbar bei gesetztem Seed.
+- Headless 1v1, Seeds 1–20, maximal 30 Minuten: Garen 12 Siege, Darius 5 Siege, 3 unentschieden/offen nach 30 Minuten. Schnellster Sieg 14:37, längster abgeschlossener Sieg 29:44. Level 18 erreicht in Seed 5 (Garen Level 18, Darius 17 bei 29:44), Seed 17 beide Level 18 bei 30:00 ohne Sieger. Seed 4 Garen Level 16/Darius 12, 9:0 Kills.
+- Wichtig: Varianz entsteht durch zufällig vergebene Spielstile/Bias; das ist **keine** adaptive Strategie oder statistisch validierte Balance. Darius gewinnt 5/20; Garen bleibt tendenziell stärker. Nur Headless, kein Browser-/Safari-Test. main unverändert.
