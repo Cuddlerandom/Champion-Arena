@@ -116,3 +116,8 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Bereits abgefeuerte Geschosse werden nicht nachträglich umgelenkt.
 - Detailfälle wie mehrere Angreifer und Rückkehr zur Minion-Priorität werden bei der Implementierung abgestimmt.
 - Noch nicht im Live-Spiel umgesetzt; V01.6 bleibt unverändert.
+
+## Turm-Aggro ohne Minions (freigegeben)
+- Sind keine gegnerischen Minions in Turmreichweite, greifen Türme gegnerische Champions in Reichweite direkt an.
+- Die bereits freigegebene Champion-Aggro bei Angriffen auf verbündete Champions hat weiterhin Vorrang.
+- Dokumentierter Designstand; Live-Spiel V01.6 noch nicht angepasst.
