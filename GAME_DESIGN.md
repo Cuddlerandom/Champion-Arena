@@ -40,3 +40,8 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - 5v5: large arena with three main lanes and connecting paths, enabling rotations, flanking and coordinated team fights.
 - All layouts mirror left/right across the centerline and preserve equal access, travel distance and defensive placement for both teams.
 - Implement and validate the 1v1 arena first, then expand to 3v3 and 5v5. This is an approved design plan, not yet implemented gameplay.
+
+## Development priority approved: 1v1 reference arena
+- Focus all near-term implementation, visual polish, camera, minion balance, towers, champion AI and testing on the 1v1 arena until it is complete and accepted.
+- Treat the finished 1v1 arena as the gameplay, technical and visual reference for 3v3 and 5v5; reuse shared systems, then expand layouts, paths and team sizes.
+- Keep existing 3v3/5v5 prototypes available but defer further development of them during the 1v1 milestone.
