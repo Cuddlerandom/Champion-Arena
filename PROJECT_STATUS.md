@@ -85,3 +85,8 @@
 - Ein 30-minütiger Headless-Test: kein Sieger, 2 äussere Türme zerstört, innere Türme 1871 und 2225 LP, beide Nexus 2600 LP; Garen 1 Kill, Darius 0 Kills. Gegenüber vorherigem Einzelszenario (innere Türme 2300 und 529 LP) schwächerer Push. Keine statistische Signifikanz, keine Browserprüfung.
 - Aktionsprotokoll (max. letzte 120 Einträge pro Champion): Garen push 47/retreat 49/fight 24, Darius push 66/retreat 20/fight 34. Diese Zahlen sind Entscheidungswechsel, keine Sekundenanteile.
 - Nächste Schritte: tatsächliche Aktionen pro Utility-Ziel, Shop-Rückkehr, bessere Turm-/Minion-Koordination und deterministische Multi-Seed-Tests.
+
+## Utility-AI Aktionen ausgeführt – 17.10.2026
+- Commit cc229a1: Kampf wählt gegnerischen Champion; Farm wählt Minions; Push verfolgt das Gebäude mit Wellenkoordination und Staging; Retreat geht zur Basis und heilt; Shop kehrt zur Basis zurück und kauft. Keine reine Score-Anzeige mehr.
+- Ein 30-Minuten-Headless-Test: kein Sieger, 3/4 Türme zerstört. Blaue Türme 0/0 LP, rote Türme 0/365 LP, beide Nexus unbeschädigt. Garen Level 11, 1 Kill; Darius Level 10, 2 Kills. Gegenüber vorigem Prototyp (2/4 Türme zerstört) verbesserter Push. Keine statistisch robuste Auswertung oder Safari-Browsertest.
+- Offene Probleme: Entscheidungsscores und Rückzug feinabstimmen, tatsächliche Shop-Ziele, Fähigkeiten, Nexus-Fokus; mehrere Seed-Tests und End-to-End-Browsertest. main unverändert.
