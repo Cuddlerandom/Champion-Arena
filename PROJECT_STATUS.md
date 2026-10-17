@@ -79,3 +79,9 @@
 - Headless-Isolationsduelle (keine Minions/Türme, vereinfachte Kampf-Loop): Level 1 Garen gewinnt nach 14s mit 205/788 LP; Level 6 Darius gewinnt nach 10s mit 328/1222 LP; Level 18 mit drei legendären Items Darius gewinnt nach 23s mit 2357/3790 LP. Diese Testschleife ist **kein identischer Spielmodus**, da tick()-Bewegung und passive Regeneration nicht ausgeführt werden.
 - 30-Minuten-Headless-1v1 mit tick(): kein Sieger; äussere Türme beider Teams zerstört; innere Türme HP [2300, 529], Nexus beide 2600/2600. Zielmatchdauer 15–25 min weiterhin verfehlt.
 - Noch offen: vollständige Skilltreue und Ressourcen, KI und Shop, UI für Fähigkeiten/Inventar, mehrfache reproduzierbare Tests, echte Browser-/iPhone-Safari-Tests. Keine Freigabe für main.
+
+## V01.8 Utility-AI erster Prototyp – 17.10.2026
+- Commit 0cb9754: Bewertung von fight/push/farm/retreat/shop, Hysterese und Aktionsprotokoll. Noch **keine** vollständige Umsetzung der Handlungsziele: farm/fight/push führen teilweise weiterhin dieselbe bestehende Zielverfolgung aus; Shop-/Retreat-Steuerung ist noch verbesserungsbedürftig.
+- Ein 30-minütiger Headless-Test: kein Sieger, 2 äussere Türme zerstört, innere Türme 1871 und 2225 LP, beide Nexus 2600 LP; Garen 1 Kill, Darius 0 Kills. Gegenüber vorherigem Einzelszenario (innere Türme 2300 und 529 LP) schwächerer Push. Keine statistische Signifikanz, keine Browserprüfung.
+- Aktionsprotokoll (max. letzte 120 Einträge pro Champion): Garen push 47/retreat 49/fight 24, Darius push 66/retreat 20/fight 34. Diese Zahlen sind Entscheidungswechsel, keine Sekundenanteile.
+- Nächste Schritte: tatsächliche Aktionen pro Utility-Ziel, Shop-Rückkehr, bessere Turm-/Minion-Koordination und deterministische Multi-Seed-Tests.
