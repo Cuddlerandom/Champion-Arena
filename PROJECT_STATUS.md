@@ -41,3 +41,8 @@
 - In keinem Lauf Sieger oder zerstörter Turm. Endstand aller drei Läufe: Türme [1829/3300, 2300/2300, 2697/3300, 2300/2300], Nexus beide 2600/2600.
 - Ziel-Matchdauer 15–25 Minuten klar verfehlt. Läufe zeigten praktisch identische Verläufe; nicht als unabhängige statistische Stichprobe werten.
 - Erforderlich: KI-/Lane-Fortschritt und Zielwahl korrigieren, Struktur- und Minion-Balance testen, danach erneut simulieren. Browser- und iPhone-Safari-Test stehen aus. Nicht auf main veröffentlichen.
+
+## V01.7 – Caster-Fortschrittsfix und erneuter Test
+- Caster prüfen nun nur nahe verbündete Melees als Frontlinie; entfernte Melees blockieren ihren Marsch nicht mehr (Commit e9e7b009).
+- Headless-JS-Logiksimulation 1v1, 30 Minuten: kein Sieg, keine zerstörten Türme. Turm-HP nach 30 Minuten: [2603/3300, 2300/2300, 2510/3300, 2300/2300], beide Nexus volle HP.
+- Noch nicht veröffentlichungsfähig: Team-Push-/Zielwahl und Strukturschaden weiter überarbeiten; kein Browser-Test durchgeführt.
