@@ -30,3 +30,8 @@
 - Added mode selector for 1v1, 3v3, 5v5, distinct map sizes, left-right mirrored lanes and team bases.
 - Added automated champions and minions in each mode; structures and core invulnerability logic. This is a first playable implementation, not a final balanced design.
 - Needs actual iPhone Safari testing and CI verification before publication to main. AI is still basic and the 3v3/5v5 layouts are schematic.
+
+## V01.7 in Entwicklung (develop, nicht veröffentlicht)
+- Erste Implementierung von Minion-HP-Skalierung, LoL-artiger Rüstungsformel, zeitabhängiger äusserer Turmverteidigung, Zielprioritäten und aktivem Nexus-Angriff.
+- Balancing-Zahlen sind vorläufig; insbesondere Trefferzahlen gegen skalierende Minions, Lane-Fortschritt, tatsächliche Matchdauer 15–25 Minuten und 3v3/5v5 müssen getestet werden.
+- Noch keine Browser-/iPhone-Verifikation, kein Merge auf main. Live-Version V01.6 bleibt unverändert.
