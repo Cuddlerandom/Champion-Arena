@@ -35,3 +35,9 @@
 - Erste Implementierung von Minion-HP-Skalierung, LoL-artiger Rüstungsformel, zeitabhängiger äusserer Turmverteidigung, Zielprioritäten und aktivem Nexus-Angriff.
 - Balancing-Zahlen sind vorläufig; insbesondere Trefferzahlen gegen skalierende Minions, Lane-Fortschritt, tatsächliche Matchdauer 15–25 Minuten und 3v3/5v5 müssen getestet werden.
 - Noch keine Browser-/iPhone-Verifikation, kein Merge auf main. Live-Version V01.6 bleibt unverändert.
+
+## V01.7 – erste Headless-Logiksimulation (1v1)
+- Direktes Ausführen des JavaScript-Spielcodes mit gemocktem DOM/Canvas, ohne Browser-Rendering; 3 Läufe à 30 simulierte Spielminuten, Zeitschritt 0,1 s.
+- In keinem Lauf Sieger oder zerstörter Turm. Endstand aller drei Läufe: Türme [1829/3300, 2300/2300, 2697/3300, 2300/2300], Nexus beide 2600/2600.
+- Ziel-Matchdauer 15–25 Minuten klar verfehlt. Läufe zeigten praktisch identische Verläufe; nicht als unabhängige statistische Stichprobe werten.
+- Erforderlich: KI-/Lane-Fortschritt und Zielwahl korrigieren, Struktur- und Minion-Balance testen, danach erneut simulieren. Browser- und iPhone-Safari-Test stehen aus. Nicht auf main veröffentlichen.
