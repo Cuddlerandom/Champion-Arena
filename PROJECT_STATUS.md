@@ -50,3 +50,8 @@
 ## V01.7 – Champion-Turmabstand korrigiert
 - Champion-Stand-off-Position war seitenverkehrt; korrigiert auf develop (Commit 800d4600).
 - Headless 1v1 30 Minuten: kein Sieger; Turm-HP [3235,2300,2705,2300], Nexus [2600,2600]. Regression gegenüber vorherigem Lauf möglich; weitere Ursachenanalyse statt voreiligem Release nötig.
+
+## V01.7 – Ursachenanalyse und Champion-Rückzug
+- Headless-Positionsmessung: Champions verharrten bei ca. 80/95 HP (von anfangs 420) nahe der Lane und heilten nicht zuverlässig.
+- Fix auf develop (5314929f): Rückzug ab 30% HP, Heimweg und Regeneration auf mindestens 90%, danach erneuter Angriff.
+- Erneute 30-Minuten-Headless-Simulation: kein Sieger, Türme [2775,2300,2493,2300], Nexus unverändert; Heilung und erneuter Kampfeinstieg beobachtet. Lane-/Wellenkoordination weiterhin unzureichend; Browser-/iPhone-Test offen.
