@@ -83,3 +83,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Melee-Minions skalieren automatisch mit der Spielzeit; konkrete Wachstumswerte und Intervalle sind noch festzulegen.
 - Wellen bleiben vorerst bei zwei Melees und einem Caster alle 18 Sekunden.
 - Noch Designstand: laufendes Spiel nicht verändert.
+
+## Melee-Minion-Skalierung: LoL-Referenz bestätigt
+- Anstelle der zuvor notierten 465 Start-HP gilt die neuere LoL-Patch-26.9-Referenz: **430 Start-HP**, **+35 HP alle 90 Sekunden** (Quelle: offizielle Riot Patch-26.9-Notes).
+- Wellenrhythmus Champion Arena bleibt **18 Sekunden**; damit erhält jede fünfte Welle das nächste Upgrade.
+- Beispielwerte bei 0:00/1:30/3:00/4:30: 430/465/500/535 HP.
+- Skalierung von Angriffsschaden und Rüstung ist noch anhand der aktuellen LoL-Werte zu verifizieren und festzulegen.
+- Diese Werte sind Designplanung, noch nicht im Live-Spiel implementiert.
