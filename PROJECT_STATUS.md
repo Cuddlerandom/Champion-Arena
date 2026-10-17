@@ -55,3 +55,9 @@
 - Headless-Positionsmessung: Champions verharrten bei ca. 80/95 HP (von anfangs 420) nahe der Lane und heilten nicht zuverlässig.
 - Fix auf develop (5314929f): Rückzug ab 30% HP, Heimweg und Regeneration auf mindestens 90%, danach erneuter Angriff.
 - Erneute 30-Minuten-Headless-Simulation: kein Sieger, Türme [2775,2300,2493,2300], Nexus unverändert; Heilung und erneuter Kampfeinstieg beobachtet. Lane-/Wellenkoordination weiterhin unzureichend; Browser-/iPhone-Test offen.
+
+## V01.7 – Goldsystem B, Shop und Regeneration (develop)
+- Implementiert: Startgold 500, passives Gold 2/s, Minion-Last-Hits und Nähebonus, Kill-/Assist-/Turmbelohnungen, 3 Basis-Items mit Shopradius und passive HP-Regeneration. Commits b77303fc und 5c63126d.
+- Headless-1v1-Simulation 30 Minuten: beide Champions erwerben alle drei Items, sammeln anschliessend mehrere tausend ungenutzte Gold; kein Sieg, kein zerstörter Turm, Nexus volle HP. Turm-HP [2706,2300,2848,2300].
+- Auffälligkeit: Kaufanzahl und Kaufhistorie in der 5-Minuten-Stichprobe widersprüchlich (items=1, purchases=3); Ursache vor Release prüfen. Goldfluss/Shop nur als vorläufig implementiert werten.
+- Nicht auf main veröffentlichen; Matchdauer 15–25 Minuten verfehlt, Browser-/iPhone-Tests offen.
