@@ -90,3 +90,7 @@
 - Commit cc229a1: Kampf wählt gegnerischen Champion; Farm wählt Minions; Push verfolgt das Gebäude mit Wellenkoordination und Staging; Retreat geht zur Basis und heilt; Shop kehrt zur Basis zurück und kauft. Keine reine Score-Anzeige mehr.
 - Ein 30-Minuten-Headless-Test: kein Sieger, 3/4 Türme zerstört. Blaue Türme 0/0 LP, rote Türme 0/365 LP, beide Nexus unbeschädigt. Garen Level 11, 1 Kill; Darius Level 10, 2 Kills. Gegenüber vorigem Prototyp (2/4 Türme zerstört) verbesserter Push. Keine statistisch robuste Auswertung oder Safari-Browsertest.
 - Offene Probleme: Entscheidungsscores und Rückzug feinabstimmen, tatsächliche Shop-Ziele, Fähigkeiten, Nexus-Fokus; mehrere Seed-Tests und End-to-End-Browsertest. main unverändert.
+
+## XP-Balance-Test – 17.10.2026
+- Commit ecea168: XP pro Minion 10→20, Nähe 240→330, XP-Levelschwelle Level×35→Level×22.
+- Ein 1v1-Headless-Lauf: Level nach 5min 6/6, 10min 9/9, 15min 11/11, 20min 14/13; Garen gewinnt nach 1361s = 22:41. Level 18 vor Matchende **noch nicht erreicht**. Kein Browser-Test, keine statistische Stichprobe.
