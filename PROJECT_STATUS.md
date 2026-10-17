@@ -46,3 +46,7 @@
 - Caster prüfen nun nur nahe verbündete Melees als Frontlinie; entfernte Melees blockieren ihren Marsch nicht mehr (Commit e9e7b009).
 - Headless-JS-Logiksimulation 1v1, 30 Minuten: kein Sieg, keine zerstörten Türme. Turm-HP nach 30 Minuten: [2603/3300, 2300/2300, 2510/3300, 2300/2300], beide Nexus volle HP.
 - Noch nicht veröffentlichungsfähig: Team-Push-/Zielwahl und Strukturschaden weiter überarbeiten; kein Browser-Test durchgeführt.
+
+## V01.7 – Champion-Turmabstand korrigiert
+- Champion-Stand-off-Position war seitenverkehrt; korrigiert auf develop (Commit 800d4600).
+- Headless 1v1 30 Minuten: kein Sieger; Turm-HP [3235,2300,2705,2300], Nexus [2600,2600]. Regression gegenüber vorherigem Lauf möglich; weitere Ursachenanalyse statt voreiligem Release nötig.
