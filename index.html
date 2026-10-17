@@ -83,9 +83,9 @@ function tryRecall(u,dt){
   return true;
  }
  if(u.recallUntil&&u.recallUntil<=time){
-  u.x=home.x;u.y=home.y;u.recallUntil=0;u.recallCooldown=time+35;u.recalls++;u.retreating=false;u.aiAction=null;return true;
+  u.x=home.x;u.y=home.y;u.recallUntil=0;u.recallCooldown=time+90;u.recalls++;u.retreating=false;u.aiAction=null;return true;
  }
- if(time<(u.recallCooldown||0)||enemyClose||underFire)return false;
+ if(time<(u.recallCooldown||0)||enemyClose||underFire||u.hp/u.max>.6&&u.gold<1500)return false;
  u.recallStarted=time;u.recallUntil=time+6;return true;
 }
 function move(u,to,dt,rate){const distance=d(u,to);if(distance>1){const step=Math.min(distance,rate*dt);const nx=u.x+(to.x-u.x)/distance*step,ny=u.y+(to.y-u.y)/distance*step;if(u.type==='champ'&&turretUnsafe(u,{x:nx,y:ny})&&!turretUnsafe(u,u))return;u.x=nx;u.y=ny}}
