@@ -33,10 +33,11 @@ function buildPriority(u){const foes=units.filter(v=>v.type==='champ'&&v.team!==
 function shop(u){if(u.type!=='champ'||u.dead>0||u.hp<=0||d(u,{x:u.team?map.w-135:135,y:map.h/2})>85)return;
  const inv=u.inventory??(u.inventory=[]);if(inv.length>6)throw Error('Inventory exceeds six slots');
  const priority=buildPriority(u);
- for(const key of priority){if(inv.includes(key))continue;const item=shopItems[key];const owned=item.parts.filter(part=>inv.includes(part));const missing=item.parts.filter(part=>!inv.includes(part));const remaining=item.cost-owned.reduce((sum,part)=>sum+shopItems[part].cost,0);
+ const active=finalBuilds.filter(key=>!inv.includes(key)&&shopItems[key].parts.some(part=>inv.includes(part)));
+ const key=active.sort((a,b)=>shopItems[b].parts.filter(part=>inv.includes(part)).length-shopItems[a].parts.filter(part=>inv.includes(part)).length)[0]||priority.find(k=>!inv.includes(k));
+ if(!key)return;const item=shopItems[key];const owned=item.parts.filter(part=>inv.includes(part));const missing=item.parts.filter(part=>!inv.includes(part));const remaining=item.cost-owned.reduce((sum,part)=>sum+shopItems[part].cost,0);
  if(missing.length===0&&u.gold>=remaining){u.gold-=remaining;for(const part of owned){inv.splice(inv.indexOf(part),1);applyItem(u,part,-1)}inv.push(key);applyItem(u,key,1);u.items=inv.length;(u.purchases??=[]).push(item.name);return}
- const next=missing.find(part=>u.gold>=shopItems[part].cost&&inv.length<6);if(next){u.gold-=shopItems[next].cost;inv.push(next);applyItem(u,next,1);u.items=inv.length;(u.purchases??=[]).push(shopItems[next].name);return}
- }
+ const next=missing.find(part=>u.gold>=shopItems[part].cost&&inv.length<6);if(next){u.gold-=shopItems[next].cost;inv.push(next);applyItem(u,next,1);u.items=inv.length;(u.purchases??=[]).push(shopItems[next].name)}
 }
 function rewardMinion(v,killer){const value=v.type==='melee'?21:v.type==='caster'?14:16;const allies=units.filter(u=>u.type==='champ'&&u.team!==v.team&&u.hp>0&&u.dead<=0&&d(u,v)<=240);for(const u of allies){gain(u,10,u===killer?value:Math.floor(value*.5))}if(killer&&killer.type==='champ'&&!allies.includes(killer))gain(killer,10,value)}
 function rewardKill(v,killer){const team=1-v.team;const allies=units.filter(u=>u.type==='champ'&&u.team===team&&u.hp>0&&u.dead<=0);if(killer&&killer.type==='champ'){gain(killer,45,300+(firstBlood?0:100));if(!firstBlood)firstBlood=true;for(const u of allies)if(u!==killer&&d(u,v)<=240)gain(u,20,150)}else if(allies.length){const near=allies.sort((a,b)=>d(a,v)-d(b,v))[0];gain(near,45,300+(firstBlood?0:100));firstBlood=true}}
