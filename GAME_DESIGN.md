@@ -121,3 +121,9 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Sind keine gegnerischen Minions in Turmreichweite, greifen Türme gegnerische Champions in Reichweite direkt an.
 - Die bereits freigegebene Champion-Aggro bei Angriffen auf verbündete Champions hat weiterhin Vorrang.
 - Dokumentierter Designstand; Live-Spiel V01.6 noch nicht angepasst.
+
+## Türme: vollständige LoL-Orientierung (freigegeben)
+- Die Türme sollen grundsätzlich das Turmverhalten von League of Legends übernehmen, einschliesslich physischem Schaden, Zielprioritäten, Champion-Aggro, ansteigendem Schaden bei wiederholten Treffern und dazugehörigen Reset-Regeln.
+- **Einzige bewusst abweichende Mechanik: Angriffsreichweite**, die auf die kleinere Champion-Arena-Karte und Lane-Geometrie abgestimmt wird; exakter Wert folgt nach Test.
+- Die freigegebene Anordnung von zwei Türmen hintereinander bleibt erhalten.
+- Aktuelle LoL-Details sind vor Implementierung anhand verlässlicher Quellen zu prüfen; diese Freigabe ist ein Designziel und bedeutet noch keine technische Umsetzung in V01.6.
