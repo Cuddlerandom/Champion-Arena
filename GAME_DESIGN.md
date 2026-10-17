@@ -6,7 +6,7 @@ Original stylized 3D fantasy champion team battle simulator inspired by the stra
 ## Modes
 - Arena first: two teams, each with two defensive towers and one base core. Destroy the enemy core to win. Both enemy towers must be destroyed before its core can be damaged.
 - Full three-lane MOBA with jungle, minions and objectives is a long-term mode, not implemented.
-- Initial tests 1v1; later 3v3 and 5v5.
+- Arena must offer three selectable match sizes: 1v1, 3v3 and 5v5. Each team must spawn exactly the selected number of AI-controlled champions. All three sizes share the same core arena win condition, with balancing and arena layout adapted to the team size as needed.
 
 ## Champions
 - Original character designs; roles tank, fighter, assassin, mage, marksman, support.
