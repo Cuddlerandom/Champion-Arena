@@ -161,3 +161,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Gut koordinierte Teams können durch gemeinsames Pushen, Champion-Kills und Objektivspiel früher (ca. 15 Minuten) gewinnen; ausgeglichene Begegnungen dürfen ca. 25 Minuten dauern.
 - LoL-orientierter Rüstungs-/MR-Abbau am vorderen Turm **ab Minute 11 als vorläufiger Balancing-Ausgangspunkt**, erst nach Umsetzung des neuen Kampfsystems und Simulationen finalisieren.
 - Team-KI, Minion-Scaling und Turm-/Nexus-Werte müssen gemeinsam getestet werden. Noch keine Gameplay-Implementierung; Live V01.6 unverändert.
+
+## Champion-Regeneration und Item-Käufe – freigegebene Designentscheidung
+- Champions dürfen Items **ausschliesslich in der eigenen Basis** kaufen (Nutzerfreigabe).
+- Gold wird im Kampf verdient; Einkäufe sind unterwegs verboten.
+- Die Champion-KI soll Rückzug, Regeneration und Einkäufe sinnvoll verbinden.
+- Passive Lebensregeneration auf der Lane sowie drei Basis-Items wurden vorgeschlagen, ihre konkreten Zahlen und die technische Implementierung sind noch nicht abschliessend freigegeben bzw. getestet.
+- Bestehende automatische Item-Käufe ausserhalb der Basis müssen bei der Implementierung ersetzt werden.
