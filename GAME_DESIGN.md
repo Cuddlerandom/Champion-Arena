@@ -55,3 +55,9 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - This is approved visual direction; detailed artwork and implementation remain to be done.
 
 - Perspective approved: slightly angled/isometric-looking 2.5D visual treatment, while keeping existing top-down world coordinates and touch camera controls for the current prototype. Full isometric projection is a later, separate technical milestone.
+
+## V01.5 tower/core mechanics (implemented prototype)
+- Stone crystal towers fire visible traveling magic projectiles; successive tower hits on the same champion stack damage until the target changes or leaves range.
+- Tower tap reveals range. Core displays shield while any defending tower survives, and becomes vulnerable only after both are destroyed.
+- Damaged towers show cracks; tower/core destruction produces visual bursts and the core triggers a victory banner.
+- Next milestone: agree detailed numeric stats for core, melee/caster minions and towers, then balance through playtests.
