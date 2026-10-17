@@ -53,3 +53,5 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Team identity: blue banners and fortified base on the left, red on the right; stone defense towers with magical crystals.
 - Keep all gameplay geometry mirrored for fairness; decorative detail may add atmosphere without obscuring gameplay or touch camera navigation.
 - This is approved visual direction; detailed artwork and implementation remain to be done.
+
+- Perspective approved: slightly angled/isometric-looking 2.5D visual treatment, while keeping existing top-down world coordinates and touch camera controls for the current prototype. Full isometric projection is a later, separate technical milestone.
