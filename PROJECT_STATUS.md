@@ -61,3 +61,9 @@
 - Headless-1v1-Simulation 30 Minuten: beide Champions erwerben alle drei Items, sammeln anschliessend mehrere tausend ungenutzte Gold; kein Sieg, kein zerstörter Turm, Nexus volle HP. Turm-HP [2706,2300,2848,2300].
 - Auffälligkeit: Kaufanzahl und Kaufhistorie in der 5-Minuten-Stichprobe widersprüchlich (items=1, purchases=3); Ursache vor Release prüfen. Goldfluss/Shop nur als vorläufig implementiert werten.
 - Nicht auf main veröffentlichen; Matchdauer 15–25 Minuten verfehlt, Browser-/iPhone-Tests offen.
+
+## V01.7 – Itemzweige technisch integriert (develop)
+- Sechs Inventarplätze, Komponenten mit Goldanrechnung, 3 Endgegenstände (Infernoschneide 3200, Bollwerk 3000, Herz der Erneuerung 2900), passive Itemeffekte und adaptive Build-Priorisierung in index.html umgesetzt. Käufe bleiben auf die eigene Basis begrenzt.
+- Erste Headless-Simulation deckte blockierende parallele Itemzweige auf; Kauf-KI korrigiert, sodass begonnene Rezepte priorisiert abgeschlossen werden.
+- Nach Korrektur: 30-Minuten-Headless-1v1-Simulation, ein äusserer Turm zerstört, kein Sieger, übrige äussere Turm-HP 726, innere Türme/Nexus unbeschädigt. 15–25-Minuten-Ziel weiterhin verfehlt.
+- Einschränkungen: Nur JS-Logik simuliert, kein echter Browser-/Safari-Test; Build-KI, Kaufhistorie, Inventar und Balancing benötigen zusätzliche Tests. main nicht verändert.
