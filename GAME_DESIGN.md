@@ -6,7 +6,11 @@ Original stylized 3D fantasy champion team battle simulator inspired by the stra
 ## Modes
 - Arena first: two teams, each with two defensive towers and one base core. Destroy the enemy core to win. Both enemy towers must be destroyed before its core can be damaged.
 - Full three-lane MOBA with jungle, minions and objectives is a long-term mode, not implemented.
-- Arena must offer three selectable match sizes: 1v1, 3v3 and 5v5. Each team must spawn exactly the selected number of AI-controlled champions. All three sizes share the same core arena win condition, with balancing and arena layout adapted to the team size as needed.
+- Arena offers three selectable match sizes: 1v1 (small), 3v3 (medium) and 5v5 (large). Each team spawns exactly that number of AI-controlled champions.
+- Mobile-first LANDSCAPE (iPhone Safari) view. Render the arena responsively without distorting world distances; handle safe areas and rotation gracefully.
+- Every arena is mirrored across its vertical center line: blue base left, red base right; equal path lengths, obstacles, tower/core placement and travel times for both teams. Both teams have equivalent AI information and rules.
+- Three distinct arena sizes, not merely the same map with different team counts. Each shares the two-towers-before-core win condition. Map layout and lane width should support its champion count.
+- Visual symmetry is a fairness requirement; the final art style remains original, not a copy of any League of Legends map.
 
 ## Champions
 - Original character designs; roles tank, fighter, assassin, mage, marksman, support.
