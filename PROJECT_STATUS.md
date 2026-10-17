@@ -99,3 +99,8 @@
 - Commit 1ee04cc: drei zufällig initialisierte KI-Spielstile (aggressive/balanced/defensive), individuelle Bias-Werte auf Utility-Scores; deterministisch reproduzierbar bei gesetztem Seed.
 - Headless 1v1, Seeds 1–20, maximal 30 Minuten: Garen 12 Siege, Darius 5 Siege, 3 unentschieden/offen nach 30 Minuten. Schnellster Sieg 14:37, längster abgeschlossener Sieg 29:44. Level 18 erreicht in Seed 5 (Garen Level 18, Darius 17 bei 29:44), Seed 17 beide Level 18 bei 30:00 ohne Sieger. Seed 4 Garen Level 16/Darius 12, 9:0 Kills.
 - Wichtig: Varianz entsteht durch zufällig vergebene Spielstile/Bias; das ist **keine** adaptive Strategie oder statistisch validierte Balance. Darius gewinnt 5/20; Garen bleibt tendenziell stärker. Nur Headless, kein Browser-/Safari-Test. main unverändert.
+
+## Taktisches Wissen – 20 Seed-Tests (17.10.2026)
+- Commit 3a430a1: tacticalKnowledge bewertet Level-/Item-/HP-Vorteile, Minion-Überzahl, Execute-Gelegenheit, Turmrisiko und Finish-Potenzial; die Scores passen sich während des Matches an. Keine neuronale KI und kein Lernen über Matches hinweg.
+- Seeds 1–20, Headless maximal 30 Minuten: Garen 8 Siege, Darius 11 Siege, 1 Match ohne Sieger. Gegenüber vorigem Stand 12/5/3; gleicher Seed, aber Spielverläufe verändern sich durch Logik. Kein Browser-Test, kein statistisch abgesicherter Balancebeweis.
+- Offene Aufgaben: mehr Seeds, Skill-Timing und Schadens-/Bleed-Korrektheit, keine versteckten Informationen, nachvollziehbare Aktionslogs, Browser/Safari-Test. main unverändert.
