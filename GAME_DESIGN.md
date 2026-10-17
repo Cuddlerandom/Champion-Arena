@@ -109,3 +109,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Bei Zielwechsel wird die Schadenssteigerung zurückgesetzt.
 - Dieses bereits in V01.6 vorhandene Grundprinzip bleibt erhalten.
 - Exakte Schadensstufen, Obergrenze und eventuelle Sonderfälle werden separat abgestimmt.
+
+## Turm-Zielpriorität (freigegeben)
+- Standardmässig priorisiert ein Turm gegnerische Minions im Angriffsradius.
+- Verursacht ein gegnerischer Champion einem verbündeten Champion im Turmbereich Schaden, priorisiert der Turm diesen angreifenden Champion beim nächsten Angriff (LoL-orientierte Turm-Aggro).
+- Bereits abgefeuerte Geschosse werden nicht nachträglich umgelenkt.
+- Detailfälle wie mehrere Angreifer und Rückkehr zur Minion-Priorität werden bei der Implementierung abgestimmt.
+- Noch nicht im Live-Spiel umgesetzt; V01.6 bleibt unverändert.
