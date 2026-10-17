@@ -76,3 +76,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Wahrer Schaden ignoriert Rüstung und Magieresistenz.
 - Rüstung betrifft nur physischen Schaden, Magieresistenz nur magischen Schaden.
 - Diese Formel ist als Designentscheidung freigegeben, aber noch nicht in die laufende V01.6 implementiert. Konkrete Stats und Schadensarten pro Einheit werden danach abgestimmt.
+
+## Melee-Minions: freigegebene Richtung
+- Startwerte nahe an LoL: 465 HP, 0 Rüstung, 0 Magieresistenz, 11 physischer Angriffsschaden; angestrebtes Angriffstempo 1,25 Angriffe/s.
+- Angriffsreichweite zunächst 110 als LoL-Referenz, muss auf die Arena-Koordinaten skaliert und getestet werden.
+- Melee-Minions skalieren automatisch mit der Spielzeit; konkrete Wachstumswerte und Intervalle sind noch festzulegen.
+- Wellen bleiben vorerst bei zwei Melees und einem Caster alle 18 Sekunden.
+- Noch Designstand: laufendes Spiel nicht verändert.
