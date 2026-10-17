@@ -176,3 +176,13 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Turmzerstörung 250 Gold für Champion-Last-Hit und 100 Gold pro Champion des Teams.
 - Items nur in eigener Basis (Radius 85 um Heimposition); Klinge 900 Gold (+20 Angriff), Schild 1100 Gold (+250 LP/+25 Rüstung), Amulett 850 Gold (+150 LP/+8 LP pro 5 Sekunden). Jedes Basis-Item pro Champion höchstens einmal, feste KI-Kaufpriorität.
 - Passive Regeneration 4 LP/5s + 0,5 LP/5s pro zusätzlichem Level; Shop und Goldsystem sind vorläufig balanciert und müssen simuliert werden.
+
+
+## Itemzweige und intelligente Builds – freigegeben (System B)
+- **Sechs Inventarplätze** pro Champion. Komponenten und fertige Gegenstände belegen jeweils Plätze; beim Kombinieren werden die verbrauchten Komponenten entfernt und ein Platz für das fertige Item belegt.
+- **Item-Bäume nach LoL-Prinzip:** Basisgegenstände werden über Zwischenkomponenten zu mächtigen Endgame-Items aufgewertet. Ein Endgame-Item kostet insgesamt ungefähr 2'900–3'200 Gold; konkrete Werte sind zunächst Balanceentwürfe.
+- **Anrechnung von Komponenten:** Bereits gekaufte Komponenten reduzieren den noch fälligen Kombinationspreis. Keine doppelte Berechnung des Gesamtpreises.
+- **Käufe nur in der eigenen Basis** (bereits freigegeben). KI soll bei Rückzug und Shop-Besuch auf verfügbare Komponenten, freien Inventarplatz und Gold achten.
+- **Intelligente Build-KI (Variante B):** Champions wählen und priorisieren Items situationsabhängig anhand ihrer Rolle, gegnerischer Schadensarten und Zusammensetzung, eigener Überlebensfähigkeit und Spielphase; keine rein feste oder zufällige Build-Reihenfolge.
+- **Erste geplante Endgegenstände:** Infernoschneide (ca. 3'200 Gold, Angriff/Krit), Bollwerk der Ewigkeit (ca. 3'000 Gold, Leben/Rüstung/Schild), Herz der Erneuerung (ca. 2'900 Gold, Leben/Regeneration/Heilung). Namen, Komponenten, genaue Effekte und Preise sind vorläufig und bedürfen Balance-Tests.
+- **Implementierungsstatus:** Dies ist eine genehmigte Designvorgabe, **noch nicht im Spielcode implementiert**. Das aktuelle einfache Drei-Item-System auf develop bleibt bis zur Umstellung bestehen. Vor Freigabe: Inventar-/Upgrade-Logik, korrekte Goldabrechnung, KI-Auswahl, sechs Slots und Match-Simulation prüfen.
