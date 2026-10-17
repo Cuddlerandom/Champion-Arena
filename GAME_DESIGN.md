@@ -134,3 +134,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Die Zerstörung des Nexus beendet das Match mit einem Sieg der gegnerischen Mannschaft.
 - Bewusste Abweichung vom klassischen LoL-Nexus, damit nach dem Verlust beider Türme eine letzte Verteidigung bleibt.
 - Reichweite, Schaden, Angriffstempo und Zielpriorität der Nexus-Verteidigung werden noch abgestimmt; noch keine Live-Implementierung.
+
+## Nexus-Verteidigung: wie ein stärkerer Turm (freigegeben)
+- Nach Zerstörung beider eigenen Türme aktiviert der Nexus eine automatische Verteidigung, die sich mechanisch wie ein Turm verhält.
+- Einzelzielangriffe, physischer Schaden, LoL-orientierte Zielpriorität und Champion-Aggro sowie ansteigender Schaden bei wiederholten Treffern auf denselben Champion.
+- Der Nexus verursacht **etwas mehr Grundschaden** als ein normaler Turm. +20 % ist ein noch nicht freigegebener Balancevorschlag, kein festgelegter Wert.
+- Nexus-Reichweite wird an die Arena angepasst; Details später im Balancing.
+- Keine Änderung am Live-Spiel V01.6.
