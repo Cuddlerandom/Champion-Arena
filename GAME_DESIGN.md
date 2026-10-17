@@ -90,3 +90,9 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Beispielwerte bei 0:00/1:30/3:00/4:30: 430/465/500/535 HP.
 - Skalierung von Angriffsschaden und Rüstung ist noch anhand der aktuellen LoL-Werte zu verifizieren und festzulegen.
 - Diese Werte sind Designplanung, noch nicht im Live-Spiel implementiert.
+
+## Caster-Minion-Schadensart (freigegeben)
+- Caster-Minions verursachen **physischen Fernkampfschaden**, auch wenn ihre Projektile magisch aussehen, analog zu League of Legends.
+- Ihr Schaden wird durch Rüstung reduziert, nicht durch Magieresistenz.
+- Melee-Minions verursachen ebenfalls physischen Schaden.
+- Zahlenwerte, Skalierung und Umsetzung im Live-Spiel werden separat abgestimmt; V01.6 bleibt unverändert.
