@@ -141,3 +141,11 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Der Nexus verursacht **etwas mehr Grundschaden** als ein normaler Turm. +20 % ist ein noch nicht freigegebener Balancevorschlag, kein festgelegter Wert.
 - Nexus-Reichweite wird an die Arena angepasst; Details später im Balancing.
 - Keine Änderung am Live-Spiel V01.6.
+
+## Nexus: Treffer-Balancing (freigegeben)
+- Der aktive Nexus soll **vollständig gesunde Melee-Minions in genau 3 Treffern** besiegen.
+- Vollständig gesunde Caster-Minions sollen **genau 2 Treffer** benötigen.
+- Gegen Champions erhält der Nexus **+20 % Grundschaden gegenüber einem normalen Turm**; die LoL-orientierte Turm-Aggro und der ansteigende Schaden bei Folgetreffern bleiben erhalten.
+- Für Minions muss die Schadensberechnung/Zieltyp-Skalierung so abgestimmt werden, dass die gewünschten Trefferzahlen trotz höherem Nexus-Schaden gelten. Dies ist eine Designvorgabe, keine Behauptung über bereits implementierte Werte.
+- Bei skalierenden Minion-HP sind die Trefferzahlen beim Balancing über die Spielzeit zu prüfen.
+- V01.6 bleibt vorerst unverändert.
