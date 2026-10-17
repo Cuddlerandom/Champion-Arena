@@ -45,3 +45,11 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Focus all near-term implementation, visual polish, camera, minion balance, towers, champion AI and testing on the 1v1 arena until it is complete and accepted.
 - Treat the finished 1v1 arena as the gameplay, technical and visual reference for 3v3 and 5v5; reuse shared systems, then expand layouts, paths and team sizes.
 - Keep existing 3v3/5v5 prototypes available but defer further development of them during the 1v1 milestone.
+
+## Approved 1v1 art direction: fantasy gladiator colosseum
+- The 1v1 reference arena uses an ancient fantasy gladiator-colosseum aesthetic, not a grassy wilderness.
+- Combat floor: warm sand and worn stone slabs with subtle battle marks; preserve clear readability of units and effects.
+- Surroundings: symmetrical sandstone walls, arches, columns, gates, braziers, ruined masonry and suggested spectator stands.
+- Team identity: blue banners and fortified base on the left, red on the right; stone defense towers with magical crystals.
+- Keep all gameplay geometry mirrored for fairness; decorative detail may add atmosphere without obscuring gameplay or touch camera navigation.
+- This is approved visual direction; detailed artwork and implementation remain to be done.
