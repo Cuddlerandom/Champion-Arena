@@ -199,3 +199,11 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - **Darius (Rot):** LP 652 (+114/Level), LP-Regeneration 10 (+1/Level) je 5s, Angriff 64 (+5/Level), Rüstung 37 (+5,2/Level), Magieresistenz 32 (+2,1/Level), Angriffstempo 0,625 (+1%/Level), Reichweite 175, Bewegung 340, Mana 263 (+58/Level), Manaregeneration 6,6 (+0,4/Level). Passive Hemorrhage: Blutung über 5s, bis zu 5 Stapel, Noxian Might bei 5 Stapeln; Q Decimate: Klingenrand/Griff unterschiedliche Schäden, Heilung bei Randtreffer, CD 9/8/7/6/5s; W Crippling Strike: verstärkter Angriff und Slow, CD 5s; E Apprehend: passive Rüstungsdurchdringung, aktives Heranziehen, CD 26–16s; R Noxian Guillotine: True Damage mit Blutungs-Skalierung und Reset-Mechanik, CD 120/100/80s.
 - Skillpunkte und R auf Level 6/11/16 nach Patch; exakte Skalierungen, Trefferzonen, Buffs/Debuffs und Schadensarten vor Gameplay-Implementierung in einer separaten Champion-Datentabelle erfassen.
 - **Status:** Patch und Werte als Referenz dokumentiert; noch nicht in index.html implementiert. LoL-Originalreichweiten/-Bewegungswerte müssen für Arena-Koordinaten skaliert werden, ohne den relativen Kampfablauf zu verfälschen. Kein main-Merge ohne Simulation und Browser-Test.
+
+## V01.8 – Utility-AI freigegeben (17.10.2026)
+- Entscheidung des Projektinhabers: Utility-AI statt ausschliesslich starrer HP-/Cooldown-Regeln.
+- Jede Champion-KI bewertet situativ Kampf, Farmen, Turm-/Nexus-Push, Rückzug/Heilung und Rückkehr zum Shop anhand von HP, Levels, Items, Fähigkeiten/Cooldowns, Gegnerpositionen, Minion-Wellen und Turmgefahr.
+- Champion-spezifisches Verhalten: Garen setzt W defensiv, R als Execute und nutzt passive Regeneration; Darius berücksichtigt Blutungsstapel, Q-Heilung, E-Reichweite und R-Execute.
+- Entscheidungen müssen im Test nachvollziehbar protokollierbar sein; Hysterese/Mindestdauer verhindert hektisches Umschalten.
+- Validierung: reproduzierbare Level-1-/Level-6-/Full-Build-Duelle und viele vollständige 1v1-Simulationen; Ziel 15–25 Minuten ohne künstlichen Matchtimer.
+- Status: Design freigegeben, **Implementierung und Simulation der neuen Utility-AI noch offen**. Nur develop, kein Merge nach main ohne Freigabe.
