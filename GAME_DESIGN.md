@@ -96,3 +96,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Ihr Schaden wird durch Rüstung reduziert, nicht durch Magieresistenz.
 - Melee-Minions verursachen ebenfalls physischen Schaden.
 - Zahlenwerte, Skalierung und Umsetzung im Live-Spiel werden separat abgestimmt; V01.6 bleibt unverändert.
+
+## Minion-Schaden gegen Zieltypen (freigegeben)
+- Melee- und Caster-Minions verursachen gegen andere Minions normalen physischen Schaden.
+- Gegen Champions verursachen beide Minion-Typen reduzierten Schaden.
+- Gegen Türme und Kristalle verursachen beide Minion-Typen noch stärker reduzierten Schaden, damit Minion-Wellen allein keine Gebäude zu schnell zerstören.
+- Die zieltypabhängigen Schadensmultiplikatoren wirken zusätzlich zur physischen Rüstungsberechnung.
+- Exakte LoL-orientierte Multiplikatoren sind noch zu recherchieren und für Champion Arena abzustimmen; keine Implementierung in V01.6.
