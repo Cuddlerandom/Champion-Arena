@@ -69,3 +69,10 @@ These are design goals, not claims of existing implementation. Consult PROJECT_S
 - Wahrer Schaden ignoriert Rüstung und Magieresistenz.
 - Keine separaten Elementarschadensarten (Feuer, Eis etc.) als eigenständiges Schadenssystem.
 - Konkrete Formeln, Zahlenwerte und Zuordnung zu Minions, Türmen und Champions werden als nächster Balancing-Schritt festgelegt; die aktuelle Spielimplementierung ist noch nicht auf dieses System umgestellt.
+
+## Freigegebene Verteidigungsformel (LoL-Modell)
+- Für Rüstung/Magieresistenz R >= 0: erlittener physischer/magischer Schaden = Rohschaden * 100 / (100 + R).
+- Für R < 0: erlittener Schaden = Rohschaden * (2 - 100 / (100 - R)).
+- Wahrer Schaden ignoriert Rüstung und Magieresistenz.
+- Rüstung betrifft nur physischen Schaden, Magieresistenz nur magischen Schaden.
+- Diese Formel ist als Designentscheidung freigegeben, aber noch nicht in die laufende V01.6 implementiert. Konkrete Stats und Schadensarten pro Einheit werden danach abgestimmt.
